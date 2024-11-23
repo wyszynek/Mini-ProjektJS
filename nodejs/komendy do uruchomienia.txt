@@ -1,0 +1,22 @@
+npm init -y
+npm install express
+
+npm install cors
+
+node server.js
+
+
+przed pobraniem cors:
+Access to fetch at 'http://localhost:3000/receiptItems' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+script.js:7 
+        
+        
+       GET http://localhost:3000/receiptItems net::ERR_FAILED 200 (OK)
+fetchItems @ script.js:7
+(anonymous) @ script.js:116
+script.js:11 Błąd podczas pobierania danych: TypeError: Failed to fetch
+    at fetchItems (script.js:7:32)
+    at script.js:116:1
+	
+	
+problem wynika z polityki CORS (Cross-Origin Resource Sharing), która blokuje żądania do serwera z innego źródła. Ponieważ próbujesz połączyć się z serwerem http://localhost:3000 z frontendu, musimy skonfigurować serwer Express, aby akceptował żądania z tego samego źródła.

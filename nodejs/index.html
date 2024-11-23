@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Receipt</title>
+</head>
+<body>
+    <div id="receiptContainer">
+        <h1>
+            Paragon
+            <span id="receiptDate"></span>
+        </h1>
+        <table id="receipt">
+            <thead>
+                <tr>
+                    <th>LP</th>
+                    <th>NAZWA</th>
+                    <th>CENA (zł)</th>
+                    <th>ILOŚĆ</th>
+                    <th>SUMA</th>
+                    <th>AKCJE</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="totalValueContainer">
+            <strong>RAZEM:</strong> <span id="totalValue">0.00</span>
+        </div>
+
+        <button onclick="openAddDialog()">Dodaj pozycję</button>
+
+        <dialog id="dialogWindow">
+            <form id="itemForm">
+                <label for="itemName">Nazwa:</label>
+                <input type="text" id="itemName" required>
+
+                <label for="itemPrice">Cena:</label>
+                <input type="number" id="itemPrice" step="0.01" min="0" required>
+
+                <label for="itemQuantity">Ilość:</label>
+                <input type="number" id="itemQuantity" min="1" required>
+
+                <input type="hidden" id="itemIndex">
+
+                <button type="button" onclick="saveItem()">Zapisz</button>
+                <button type="button" onclick="closeDialog()">Anuluj</button>
+            </form>
+        </dialog>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

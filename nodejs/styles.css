@@ -1,0 +1,91 @@
+/* Centering and basic font */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+  }
+  
+  /* Main receipt container */
+  #receiptContainer {
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Header styling */
+  h1 {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* Table styling */
+  #receipt {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  #receipt th, #receipt td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+  }
+  
+  #receipt th {
+    color: #666;
+  }
+  
+  #receipt tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Total value styling */
+  #totalValueContainer {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Button styling */
+  button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #777a7e;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #585c61;
+  }
+  
+  /* Dialog styling */
+  dialog {
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  label {
+    display: block;
+    margin-top: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
